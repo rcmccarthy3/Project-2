@@ -2,9 +2,9 @@
 colors. The biggest challenge was making the overlay of the translucent white space between texts look sharp. I also used 
 w3schools to see examples of fonts and how they looked without needing to input them to see on the website.
 Overall, the main design goal we had in mind was to make it visually appealing while keeping the designs simple
-in order to make all of our content direct and easy to read. */
+in order to make all of our content direct and easy to read. EM */
 
-/* This is the main styling for the website for designs like the font, colors, and background. */
+/* This is the main styling for the website for designs like the font, colors, and background. EM */
 body {
     font-family: "Segoe UI", Tahoma, sans-serif;
     background-color: #f4f7fb;
@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    /* Dark navy color.  */
+    /* Dark navy color. EM */
     background-color: #172033;
     color: white;
     margin-bottom: 30px;
