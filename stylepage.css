@@ -82,3 +82,30 @@ footer {
     text-align: center;
     color: #596579;
 }
+
+
+.home-page {
+    background-image: url("intersandtech.png");
+}
+
+.about-page {
+    background-image: url("madisonuw.jpg");
+}
+
+.resources-page {
+    background-image: url("implicitbias.png");
+}
+
+.tech-page {
+    background-image: url("corp.jpeg");
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.88);
+}
