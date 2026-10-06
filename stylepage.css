@@ -1,5 +1,8 @@
 /* For hex color codes listed in here, I used https://www.w3schools.com/colors/colors_picker.asp to view and test different
-colors. */
+colors. The biggest challenge was making the overlay of the translucent white space between texts look sharp. I also used 
+w3schools to see examples of fonts and how they looked without needing to input them to see on the website.
+Overall, the main design goal we had in mind was to make it visually appealing while keeping the designs simple
+in order to make all of our content direct and easy to read. */
 
 /* This is the main styling for the website for designs like the font, colors, and background. */
 body {
