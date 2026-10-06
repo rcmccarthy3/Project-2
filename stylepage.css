@@ -1,3 +1,7 @@
+/* For hex color codes listed in here, I used https://www.w3schools.com/colors/colors_picker.asp to view and test different
+colors. */
+
+/* This is the main styling for the website for designs like the font, colors, and background. */
 body {
     font-family: "Segoe UI", Tahoma, sans-serif;
     background-color: #f4f7fb;
@@ -10,6 +14,7 @@ body {
 }
 
 header {
+    /* Dark navy color.  */
     background-color: #172033;
     color: white;
     margin-bottom: 30px;
@@ -17,11 +22,13 @@ header {
     border-radius: 10px;
 }
 
+
+/* Used relaticely different heading styles are used to make the page easier to read and give titles a more sharp look. EM */
 h1 {
-    font-family: "Courier New", monospace;
+    font-family: "Lucida Console", Monaco, monospace;
     font-size: 38px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
 }
 
 h2 {
@@ -65,6 +72,9 @@ nav a {
 main {
     max-width: 900px;
     margin: auto;
+    
+    /* I used rgba to make the white background slightly transparent. This came a sharp looking 
+    see through look at the background image when scrolling on the pages. EM */
     background-color: rgba(255, 255, 255, 0.88);
 }
 
@@ -87,7 +97,9 @@ footer {
     color: #596579;
 }
 
-
+/* Each page uses its own background image to match 
+the topic of that page. The images are assigned using separate page classes. This keeps 
+the design consistent while still making each page feel different. EM */
 .home-page {
     background-image: url("intersandtech.png");
 }
