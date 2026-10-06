@@ -1,28 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
     margin: 40px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 header {
+    background-color: #172033;
+    color: white;
     margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 10px;
 }
 
 h1 {
-    font-size: 36px;
+    font-family: "Courier New", monospace;
+    font-size: 38px;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 h2 {
-    font-size: 24px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 25px;
     margin-top: 30px;
+    color: #2457a6;
 }
 
 h3 {
+    font-family: "Trebuchet MS", sans-serif;
     font-size: 20px;
     margin-top: 30px;
+    color: #2457a6;
 }
 
 p {
@@ -33,18 +43,20 @@ p {
 nav {
     text-align: center;
     margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 a {
-    color: blue;
+    color: #2563eb;
     display: block;
     margin-bottom: 8px;
 }
 
 nav a {
+    color: #7dd3fc;
     display: inline;
     margin: 10px;
+    font-weight: bold;
 }
 
 main {
@@ -53,15 +65,20 @@ main {
 }
 
 section {
+    background-color: white;
     margin-bottom: 35px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 img {
     display: block;
     margin: 20px auto;
+    border-radius: 8px;
 }
 
 footer {
     margin-top: 40px;
     text-align: center;
+    color: #596579;
 }
