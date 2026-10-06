@@ -6,7 +6,7 @@ in order to make all of our content direct and easy to read. EM */
 
 /* This is the main styling for the website for designs like the font, colors, and background. EM */
 body {
-    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     background-color: #f4f7fb;
     color: #1f2937;
     margin: 40px;
