@@ -104,8 +104,9 @@ footer {
 /* Each page uses its own background image to match 
 the topic of that page. The images are assigned using separate page classes. This keeps 
 the design consistent while still making each page feel different. EM */
+/* Iteration 2 - Changed to darker background image to improve readibility of text on home page. EM */
 .home-page {
-    background-image: url("intersandtech.png");
+    background-image: url("intersectionalityWords.jpg");
 }
 
 .about-page {
@@ -116,8 +117,9 @@ the design consistent while still making each page feel different. EM */
     background-image: url("implicitbias.png");
 }
 
+/* Changed to darker background to improve text readibility in revisions 2. EM */
 .tech-page {
-    background-image: url("corp.jpeg");
+    background-image: url("techherocloud.jpg");
 }
 
 /* About Us photos - added on second iteration. EM */
