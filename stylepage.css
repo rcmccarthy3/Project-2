@@ -118,3 +118,12 @@ the design consistent while still making each page feel different. EM */
 .tech-page {
     background-image: url("corp.jpeg");
 }
+
+/* About Us photos - added on second iteration. EM */
+.about-photo {
+    float: right;
+    width: 180px;
+    height: 235px;
+    object-fit: cover;
+    margin: 0 0 15px 20px;
+}
