@@ -106,7 +106,7 @@ the topic of that page. The images are assigned using separate page classes. Thi
 the design consistent while still making each page feel different. EM */
 /* Iteration 2 - Changed to darker background image to improve readibility of text on home page. EM */
 .home-page {
-    background-image: url("intersectionalityWords.jpg");
+    background-image: url("homegraphic.png");
 }
 
 .about-page {
