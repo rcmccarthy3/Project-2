@@ -18,7 +18,8 @@ body {
 
 header {
     /* Dark navy color. EM */
-    background-color: #172033;
+    /* iteration 2, updated background color to better complement background images. EM */
+    background-color: ##D8C6A5;
     color: white;
     margin-bottom: 30px;
     padding: 25px;
