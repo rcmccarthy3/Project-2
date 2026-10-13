@@ -130,3 +130,12 @@ the design consistent while still making each page feel different. EM */
     object-fit: cover;
     margin: 0 0 15px 20px;
 }
+
+/* Homepage intersectionality diagram. EM*/
+.intersectionality-diagram {
+    display: block;
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
