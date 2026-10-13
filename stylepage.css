@@ -78,11 +78,12 @@ main {
     
     /* I used rgba to make the white background slightly transparent. This came a sharp looking 
     see through look at the background image when scrolling on the pages. EM */
-    background-color: rgba(255, 255, 255, 0.88);
+    /*  Iteration 2 - revised color below - changed from a white to a lighter gray to make readability better when competing with background. EM  */
+    background-color: rgba(245, 246, 248, 0.88);
 }
 
 section {
-    background-color: white;
+    background-color: #f5f6f8;
     margin-bottom: 35px;
     padding: 20px;
     border-radius: 8px;
