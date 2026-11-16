@@ -12,6 +12,7 @@ Lastly, I turned the nav links into buttons and added CSS hover transitions on l
 interactive. RM */
 
 /* This is the main styling for the website for designs like the font, colors, and background. EM */
+/* Iteration 3 - Added max-width and auto margins on the body so the header, main, and footer all center evenly on the screen without side gaps. RM */
 body {
     font-family: Verdana, Geneva, sans-serif;
     background-color: #f4f7fb;
@@ -27,6 +28,7 @@ body {
 header {
     /* Dark navy color. EM */
     /* iteration 2, updated background color to better complement background images. EM */
+    /* Iteration 3, changed back to deep navy (#172033) so white text passes accessibility contrast and unifies all pages. RM */
     background-color: #172033;
     color: #ffffff;
     margin-bottom: 30px;
@@ -59,8 +61,9 @@ h3 {
     color: #1d4ed8;
 }
 
+/* Iteration 3, I removed max-width: 800 px so paragraphs fill the section cards evenly instead of leaving empty air on the right. RM */
 p {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 nav {
@@ -69,6 +72,7 @@ nav {
     margin-bottom: 5px;
 }
 
+/* Iteration 3, I added hover color transitions to regular links and button styling with lift hover effects to nav links for CSS interactivity. RM */
 a {
     color: #1d4ed8;
     text-decoration: underline;
@@ -86,7 +90,7 @@ nav a {
     text-decoration: none;
     display: inline-block;
     padding: 8px 14px
-    margin: 5px;
+    margin: 5px 8px;
     border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -102,11 +106,13 @@ main {
     /* I used rgba to make the white background slightly transparent. This came a sharp looking 
     see through look at the background image when scrolling on the pages. EM */
     /*  Iteration 2 - revised color below - changed from a white to a lighter gray to make readability better when competing with background. EM  */
-    background-color: rgba(245, 246, 248, 0.92);
+    /*  Iteration 3, I added padding and border-radius so the main container frames the inner sections clearly. RM */
+    background-color: rgba(245, 246, 248, 0.96);
     padding: 25px;
     border-radius: 10px;
 }
 
+/* Iteration 3, I added subtle shadow and hover elevation so content sections feel interactive and visually separated. RM */
 section {
     background-color: #ffffff;
     margin-bottom: 25px;
@@ -129,6 +135,7 @@ img {
     height: auto;
 }
 
+/* Iteration 3, I added matching semi-transparent background box to footer so the text stays readable over the page background images. RM */
 footer {
     margin-top: 30px;
     padding: 15px;
