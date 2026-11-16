@@ -4,12 +4,20 @@ w3schools to see examples of fonts and how they looked without needing to input 
 Overall, the main design goal we had in mind was to make it visually appealing while keeping the designs simple
 in order to make all of our content direct and easy to read. EM */
 
+/* For this cleanup round, I focused on fixing the spacing and alignment issues from our feedback. Before, the header was a lot wider
+than the main box and the paragraph had a smaller width, which left too much empty gap on the sides of the text. I set a 
+max-width of 960px and auto margins on the body so the header, main content, and footer all line up and sit centered on the page.
+I also switched the header color from tan to dark navy so the white title text has better contrast and matches up with the other pages.
+Lastly, I turned the nav links into buttons and added CSS hover transitions on links and sections to make the website feel more 
+interactive. RM */
+
 /* This is the main styling for the website for designs like the font, colors, and background. EM */
 body {
     font-family: Verdana, Geneva, sans-serif;
     background-color: #f4f7fb;
     color: #1f2937;
-    margin: 40px;
+    max-width: 960px;
+    margin: 20px auto;
     line-height: 1.6;
     background-size: cover;
     background-position: center;
@@ -19,87 +27,115 @@ body {
 header {
     /* Dark navy color. EM */
     /* iteration 2, updated background color to better complement background images. EM */
-    background-color: #D8C6A5;
-    color: white;
+    background-color: #172033;
+    color: #ffffff;
     margin-bottom: 30px;
     padding: 25px;
     border-radius: 10px;
+    text-align: center;
 }
 
 
 /* Used relaticely different heading styles are used to make the page easier to read and give titles a more sharp look. EM */
 h1 {
     font-family: "Lucida Console", Monaco, monospace;
-    font-size: 38px;
+    font-size: 34px;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    margin: 0 0 10px 0;
 }
 
 h2 {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 25px;
-    margin-top: 30px;
-    color: #2457a6;
+    margin-top: 10px;
+    color: #1d4ed8;
 }
 
 h3 {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 20px;
-    margin-top: 30px;
-    color: #2457a6;
+    margin-top: 25px;
+    color: #1d4ed8;
 }
 
 p {
     font-size: 16px;
-    max-width: 800px;
 }
 
 nav {
     text-align: center;
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 a {
-    color: #2563eb;
-    display: block;
-    margin-bottom: 8px;
+    color: #1d4ed8;
+    text-decoration: underline;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+a:hover {
+    color: #0f172a;
+    background-color: #e2e8f0;
 }
 
 nav a {
-    color: #172033;
-    display: inline;
-    margin: 10px;
+    color: #ffffff;
+    background-color: #2457a6;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 14px
+    margin: 5px;
+    border-radius: 6px;
     font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 main {
-    max-width: 900px;
-    margin: auto;
-    
     /* I used rgba to make the white background slightly transparent. This came a sharp looking 
     see through look at the background image when scrolling on the pages. EM */
     /*  Iteration 2 - revised color below - changed from a white to a lighter gray to make readability better when competing with background. EM  */
-    background-color: rgba(245, 246, 248, 0.88);
+    background-color: rgba(245, 246, 248, 0.92);
+    padding: 25px;
+    border-radius: 10px;
 }
 
 section {
-    background-color: #f5f6f8;
-    margin-bottom: 35px;
-    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding: 25px;
     border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2a ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 img {
     display: block;
     margin: 20px auto;
     border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 30px;
+    padding: 15px;
     text-align: center;
-    color: #596579;
+    background-color: rgba(245, 246, 248, 0.92);
+    border-radius: 8px;
+    color: #334155;
 }
 
 /* Each page uses its own background image to match 
