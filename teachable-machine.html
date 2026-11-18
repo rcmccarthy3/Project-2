@@ -74,14 +74,34 @@
     <section>
       <h2>Project Statement</h2>
 
-      <h3>Overview</h3>
+      <h3>Overview &amp; Project Goals</h3>
       <p>
-        (Why we chose everyday wardrobe and object classifications, what our model attempts to do, and how it connects to AI and society.)
+        For Project 3, Eddie and I built a five-class image classification model using Google Teachable Machine to explore how machine learning systems categorize everyday object,
+        and where they break down. Rather than choosing a abstract topic, we trained our classifier on five easy items from daily life: hats, shirts, sweatshirts, shoes, and random objects.
+        Because clothes and everyday items are so familiar, they gave us an easy way to test how an algorithm reads shapes, colors, and textures through a webcam.
+        Throughout the project, we collaborated together collecting and organizing our 200-image dataset, training and testing the model in Teachable Machine, and building out our Project 3
+        webpage to document our process and connect it to the rest of our site.
+      </p>
+
+      <p>
+        Training a model to tell a sweatshirt apart from a show might seem simple compared to facial recognition or hiring software, but building it showed us that even a small class project
+        runs on the exact same logic as big commercial computer vision tools. As Dr.Joy Buolamwini explains in _Unmasking AI_, machine learning models don't actually "know" what an object
+        is the way a person does, an artificial neural network is just a "pattern recognizer" that adjusts its weights based on the labeled examples it gets shown. Watching where our model
+        worked and where it failed in a low-stakes setting helped us see how human choices during data collection directly shape what an algorithm can and can't see.
       </p>
 
       <h3>Data Collection &amp; Curation</h3>
       <p>
-        (How Eddie and I each captured 20 original images per category across Hats, Shirts, Sweatshirts, Shoes, and Random Objects, and how lighting, backgrounds, and object overlap influenced training.)
+        To build an original, balanced dataset, Eddie and I each took 100 photos, 20 per category, and combined them for 200 training images total. Splitting the photos evenly between us was a
+        deliberate choice. If we had only used clothes from one place under one lighting, the model probably would have memorized a single wall color, specific logos, or one room's lighting
+        instead of what actually makes a hat a hat. Mixing our photos across two different places, closets, and camera angles gave the model much more variety in lighting, fabrics, styles,
+        and backgrounds.
+      </p>
+
+      <p>
+        Even with 200 original images, deciding what went into each folder forced us to make judgement calls that affected how the model behaved. In Chapter 10 of _Unmasking AI_, Buolamwini
+        points out that whoever builds a dataset acts as the "arbiters of ground truth," noting that "decision-making power is ultimately what defines ground truth" and "human decisions are subjective."
+        
       </p>
       
       <h3>Connection to Course Literature</h3>
