@@ -137,17 +137,17 @@
 
       <h3>Overview &amp; Project Goals</h3>
       <p>
-        For Project 3, Eddie and I built a five-class image classification model using Google Teachable Machine to explore how machine learning systems categorize everyday object,
-        and where they break down. Rather than choosing a abstract topic, we trained our classifier on five easy items from daily life: hats, shirts, sweatshirts, shoes, and random objects.
-        Because clothes and everyday items are so familiar, they gave us an easy way to test how an algorithm reads shapes, colors, and textures through a webcam.
-        Throughout the project, we collaborated together collecting and organizing our 200-image dataset, training and testing the model in Teachable Machine, and building out our Project 3
-        webpage to document our process and connect it to the rest of our site.
+        For Project 3, Eddie and I worked together to build a five-class image classifier using Google Teachable Machine to see how machine learning models categorize everyday objects, and
+        where they mess up. Instead of picking an abstract topic, we trained our model on five familiar things we deal with every day: hats, shirts, sweatshirts, shoes, and random objects.
+        Because clothes and everyday items are so familiar, they gave us an easy way to test how an algorithm reads shapes, colors, and textures through a webcam. Throughout the project, we
+        collaborated across every stage, collecting and converting our 200-image dataset, training and testing the model in Teachable Machine, and building out our Project 3 webpage to document
+        our process and tie it to the rest of our site.
       </p>
 
       <p>
-        Training a model to tell a sweatshirt apart from a show might seem simple compared to facial recognition or hiring software, but building it showed us that even a small class project
-        runs on the exact same logic as big commercial computer vision tools. As Dr. Joy Buolamwini explains in *Unmasking AI*, machine learning models don't actually "know" what an object
-        is the way a person does, an artificial neural network is just a "pattern recognizer" that adjusts its weights based on the labeled examples it gets shown. Watching where our model
+        Training a model to tell a sweatshirt apart from a shoe might seem simple compared to facial recognition or hiring software, but building it showed us that even a small class project
+        runs on the same logic as big commercial computer vision tools. As Dr. Joy Buolamwini explains in <em>Unmasking AI</em>, machine learning models don't actually "know" what an object
+        is the way a person does; an artificial neural network is just a "pattern recognizer" that adjusts its weights based on the labeled examples it gets shown. Watching where our model
         worked and where it failed in a low-stakes setting helped us see how human choices during data collection directly shape what an algorithm can and can't see.
       </p>
 
@@ -156,23 +156,52 @@
         To build an original, balanced dataset, Eddie and I each took 100 photos, 20 per category, and combined them for 200 training images total. Splitting the photos evenly between us was a
         deliberate choice. If we had only used clothes from one place under one lighting, the model probably would have memorized a single wall color, specific logos, or one room's lighting
         instead of what actually makes a hat a hat. Mixing our photos across two different places, closets, and camera angles gave the model much more variety in lighting, fabrics, styles,
-        and backgrounds.
+        and backgrounds. We also ran into an unexpected technical bottleneck while uploading our images. The Teachable Machine wouldn't accept several of the image file formats from our phones, 
+        which delayed training and forced us to manually convert the files one by one before we could import them into the model.
       </p>
 
       <p>
-        Even with 200 original images, deciding what went into each folder forced us to make judgement calls that affected how the model behaved. In Chapter 10 of _Unmasking AI_, Buolamwini
-        points out that whoever builds a dataset acts as the "arbiters of ground truth," noting that "decision-making power is ultimately what defines ground truth" and "human decisions are subjective."
-        
+        Even after getting all 200 images into Teachable Machine, deciding what exactly went into each folder forced us to make judgment calls that affected how the model behaved. In Chapter 10 of 
+        <em>Unmasking AI</em>, Buolamwini points out that whoever builds a dataset acts as the "arbiters of ground truth," noting that "decision-making power is ultimately what defines ground truth"
+        and "human decisions are subjective." We ran into the exact issue while putting our dataset together. Shirts and sweatshirts look a lot alike; they both have sleeves, torso fabric, and similar
+        neutral colors, so different styles of tops easily got messed up across categories. Adding a random objects category made this even clearer because "random objects" doesn't just have one shared
+        shape or texture; it turned into a catch-all bucket for anything that wasn't clothes. This showed what Buolamwini calls the "politics of classification" when humans force a messy real world into
+        strict digital boxes.
       </p>
       
-      <h3>Connection to Course Literature</h3>
+      <h3>Resonant Lessons from <em>Unmasking AI</em></h3>
       <p>
-        (Our findings to Dr.Joy Buolamwini's <em>Unmasking AI</em> and course concepts around training data representation, classification boundaries, and algorithmic bias.)
+        The biggest takeaway from <em>Unmasking AI</em> that stuck with us during this project was "defaults are not neutral" and "neural does not equate to neutral." In the Introduction and Chapter 5,
+        Buolamwini talks about how face-tracking software wouldn't detect her dark-skinned face until she put on a white mask, which led her to coin the "coded gaze" to describe how "the priorities,
+        preferences, and prejudices of those who have the power to shape technology can propagate harm, such as discrimination and erasure." Later on in her "Gender Shades" study in Chapter 11, she proved
+        that high overall accuracy scores can hide huge gaps across intersecting groups. While commercial systems were nearly 100 percent accurate on lighter-skinned men, error rates jumped between 34.4
+        and 46.8 percent for darker-skinned women. As she puts it, "for machine learning models data is destiny, because the data provides the model with the representation of the world as curated by the
+        makers of the system."
+      </p>
+
+      <p>
+        Putting together our Teachable Machine dataset made Buolamwini's points about the coded gaze and "convenience sampling" feel very real. Obviously, mislabeling a sweatshirt or a baseball cap doesn't
+        cause the real-world harm of a false facial recognition arrest, but the underlying problem is the same. The model can only recognize what its training data teaches it to expect. As we collected our 
+        200 photos, it was easy to see how our own habits and dataset imbalances shaped the defaults, like which categories had wider color variation and which items had clearer visual landmarks. Another idea
+        from Chapter 6 that stood out to us was the "AI functionality fallacy," assuming a tool actually works the way it's supposed to just because it spits out a confident number. Seeing Teachable Machine
+        output a 100 percent confidence score on a totally blank or random webcam frame was a real-life reminder of why testing edge cases and questioning datasets matters so much in Information Science.
       </p>
 
       <h3>Limitations, False Positives &amp; Reflection</h3>
       <p>
-        (Analyze where the model struggles, like distinguishing folded shirts from sweatshirts or misclassifying unfamiliar items and reflect on what this reveals about real-world computer vision systems.)
+        Testing our live webcam model showed clear strengths alongside specific false positives, backing up Buolamwini's point in Chapter 15 that training in a controlled setup doesn't prepare a model for 
+        "unconstrained environments, also known as the real world." On the positive side, the model recognized shirts reliably whenever the sleeve pattern was clearly visible, and sweatshirts were fairly
+        accurate whenever the hood was in frame. But, the biggest flaw we found was that blank backgrounds or random live webcam shots often triggered a false positive of 100 percent hats. We guess that
+        our hats folder had much wider color and style variation than the other categories, causing the model to associate all kinds of unrelated colors and shapes with hats. Other clothing items were also less 
+        accurate when their styles overlapped across multiple categories, showing how 200 photos total (40 per class) is still too small a sample size to generalize cleanly.
+      </p>
+
+      <p>
+        Connecting this project to the rest of our site, like Kimberle Crenshaw's work on intersectionality, implicit bias, and Joy Buolamwini's story on our Tech Heroes page, changed how I think about the AI
+        systems I use every day on social media and online. In <em>Unmasking AI</em>, Buolamwini uses "counter-demos" and "evocative audits" to show technical failures in action and push back against the idea 
+        that algorithms are automatically objective. Building and testing our own five-class classifier gave me a small-scale view of why that matters. Behind every "smart" tool is just a limited batch of
+        human-labeled examples, subjective categories, and blind spots. At the end of the day, this project drove home Buolamwini's point that "design is not destiny," making fair, reliable tech takes more
+        than just training a model. It takes careful data collection, being honest about a system's limits, and questioning the assumptions engraved into every dataset.
       </p>
     </section>
 
