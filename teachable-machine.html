@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teachable Machine | Project 3</title>
   <link rel="stylesheet" href="stylepage.css">
 </head>
@@ -35,11 +35,11 @@
       <ul>
         <li><strong>5 Classes:</strong> Hats, Shirts, Sweatshirts, Shoes, and Random Objects</li>
         <li><strong>200 Total Images:</strong> 100 original images contributed by Romy and 100 by Eddie (20 images per class per member)</li>
-        <li><strong>Data Diversity:</strong> Combined across both contributors with varies angles, lighting conditions, backgrounds, and item styles</li>
+        <li><strong>Data Diversity:</strong> Combined across both contributors with varied angles, lighting conditions, backgrounds, and item styles</li>
       </ul>
     </section>
 
-    <!-- Card 2: User instructions and placeholder for Live Teachable Machine webcam model. RM-->
+    <!-- Card 2: User instructions and live Teachable Machine webcam model. RM-->
     <section>
       <h2>Live Classifier</h2>
       <p>
@@ -51,7 +51,7 @@
         <li>Observe the live classification labels and confidence percentages update in real time.</li>
       </ol>
 
-      <!-- Placeholder container for the exported Teachable Machine JS/HTML embed code. RM -->
+      <!--  Exported Teachable Machine JS/HTML webcam model embed. RM -->
       <div>Teachable Machine Image Model</div>
 <button type="button" onclick="init()">Start Model</button>
 <div id="webcam-container"></div>
@@ -120,7 +120,7 @@
       <p>
         Watch our screen-recorded demonstration showing the model classifying items across all five categories, including edge cases and false positives.
       </p>
-      <!-- Container for demo video once screen recording is finallized. RM -->
+      <!-- Container for demo video once screen recording is finalized. RM -->
       <iframe
   width="100%"
   height="400"
@@ -190,14 +190,15 @@
       <h3>Limitations, False Positives &amp; Reflection</h3>
       <p>
         Testing our live webcam model showed clear strengths alongside specific false positives, backing up Buolamwini's point in Chapter 15 that training in a controlled setup doesn't prepare a model for 
-        "unconstrained environments, also known as the real world." On the positive side, the model recognized shirts reliably whenever the sleeve pattern was clearly visible, and sweatshirts were fairly
-        accurate whenever the hood was in frame. But, the biggest flaw we found was that blank backgrounds or random live webcam shots often triggered a false positive of 100 percent hats. We guess that
-        our hats folder had much wider color and style variation than the other categories, causing the model to associate all kinds of unrelated colors and shapes with hats. Other clothing items were also less 
-        accurate when their styles overlapped across multiple categories, showing how 200 photos total (40 per class) is still too small a sample size to generalize cleanly.
+        "unconstrained environments, also known as the real world." Overall, the classifier performed reliably when clothing items had distinct visual landmarks recognizing shirts with high confidence whenever
+        the sleeve pattern was clearly visible, and identifying sweatshirts accurately whenever the hood was in frame. However accuracy dropped by a lot whenever item styles overlapped across categories, and our
+        biggest mistake was that blank backgrounds or random live webcame shots often triggered a false positive of 100 percent hats. We attribute this to our hats folder having much wider color and style range
+        than the other categories, causing the model to associate all kinds of unrelated colors and shapes with hats. Testing these exact accuracy gaps across our dataset showed how limited sample sizes strugge
+        to generalize cleanly across everyday environments.
       </p>
 
       <p>
-        Connecting this project to the rest of our site, like Kimberle Crenshaw's work on intersectionality, implicit bias, and Joy Buolamwini's story on our Tech Heroes page, changed how I think about the AI
+        Connecting this project to the rest of our site, like Kimberl&eacute; Crenshaw's work on intersectionality, implicit bias, and Joy Buolamwini's story on our Tech Heroes page, changed how I think about the AI
         systems I use every day on social media and online. In <em>Unmasking AI</em>, Buolamwini uses "counter-demos" and "evocative audits" to show technical failures in action and push back against the idea 
         that algorithms are automatically objective. Building and testing our own five-class classifier gave me a small-scale view of why that matters. Behind every "smart" tool is just a limited batch of
         human-labeled examples, subjective categories, and blind spots. At the end of the day, this project drove home Buolamwini's point that "design is not destiny," making fair, reliable tech takes more
