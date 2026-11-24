@@ -34,7 +34,7 @@
       <h3>Dataset Summary</h3>
       <ul>
         <li><strong>5 Classes:</strong> Hats, Shirts, Sweatshirts, Shoes, and Random Objects</li>
-        <li><strong>200 Total Images:</strong> 100 original images contributed by Romy and 100 by Eddie (20 images per class per member)</li>
+        <li><strong>Initial &amp; Expanded Dataset:</strong> 200 original images contributed by Romy and Eddie (20 images per class per member), expanded in our second iteration with additional non-clothing and category samples</li>
         <li><strong>Data Diversity:</strong> Combined across both contributors with varied angles, lighting conditions, backgrounds, and item styles</li>
       </ul>
     </section>
@@ -153,9 +153,9 @@
 
       <h3>Data Collection &amp; Curation</h3>
       <p>
-        To build an original, balanced dataset, Eddie and I each took 100 photos, 20 per category, and combined them for 200 training images total. Splitting the photos evenly between us was a
-        deliberate choice. If we had only used clothes from one place under one lighting, the model probably would have memorized a single wall color, specific logos, or one room's lighting
-        instead of what actually makes a hat a hat. Mixing our photos across two different places, closets, and camera angles gave the model much more variety in lighting, fabrics, styles,
+        To build an original, balanced dataset, Eddie and I each took 100 photos, 20 per category, and initially combined them for 200 training images total before expanding the dataset in our second iteration. 
+        Splitting the photos evenly between us was a deliberate choice. If we had only used clothes from one place under one lighting, the model probably would have memorized a single wall color, specific 
+        logos, or one room's lighting instead of what actually makes a hat a hat. Mixing our photos across two different places, closets, and camera angles gave the model much more variety in lighting, fabrics, styles,
         and backgrounds. We also ran into an unexpected technical bottleneck while uploading our images. The Teachable Machine wouldn't accept several of the image file formats from our phones, 
         which delayed training and forced us to manually convert the files one by one before we could import them into the model.
       </p>
@@ -187,14 +187,15 @@
         output a 100 percent confidence score on a totally blank or random webcam frame was a real-life reminder of why testing edge cases and questioning datasets matters so much in Information Science.
       </p>
 
+      <!-- Revised based on peer feedback to detail model accuracy and specific false positives. RM -->
       <h3>Limitations, False Positives &amp; Reflection</h3>
       <p>
-        Testing our live webcam model showed clear strengths alongside specific false positives, backing up Buolamwini's point in Chapter 15 that training in a controlled setup doesn't prepare a model for 
-        "unconstrained environments, also known as the real world." Overall, the classifier performed reliably when clothing items had distinct visual landmarks recognizing shirts with high confidence whenever
-        the sleeve pattern was clearly visible, and identifying sweatshirts accurately whenever the hood was in frame. However accuracy dropped by a lot whenever item styles overlapped across categories, and our
-        biggest mistake was that blank backgrounds or random live webcame shots often triggered a false positive of 100 percent hats. We attribute this to our hats folder having much wider color and style range
-        than the other categories, causing the model to associate all kinds of unrelated colors and shapes with hats. Testing these exact accuracy gaps across our dataset showed how limited sample sizes strugge
-        to generalize cleanly across everyday environments.
+        Based on peer review feedback asking how accurate our classifier was and where it struggled, testing our live webcam model showed clear strengths alongside specific false positives, backing up Buolamwini's point in 
+        Chapter 15 that training in a controlled setup doesn't prepare a model for "unconstrained environments, also known as the real world." Overall, the classifier performed reliably when clothing items had distinct 
+        visual landmarks recognizing shirts with high confidence whenever the sleeve pattern was clearly visible, and identifying sweatshirts accurately whenever the hood was in frame. However accuracy dropped by a lot 
+        whenever item styles overlapped across categories, and our biggest mistake was that blank backgrounds or random live webcam shots often triggered a false positive of 100 percent hats. We attribute this to our hats 
+        folder having much wider color and style range than the other categories, causing the model to associate all kinds of unrelated colors and shapes with hats. Testing these exact accuracy gaps across our dataset showed 
+        how limited sample sizes struggle to generalize cleanly across everyday environments.
       </p>
 
       <p>
